@@ -44,7 +44,7 @@ if [[ ${CI_BRANCH} == ${DEFAULT_BRANCH} ]] ; then
 	DEFAULT_ENV=${DEFAULT_ENV:-dev}
 else
   # Otherwise, name the environment after the CI build number.
-	DEFAULT_ENV=ci-$CI_BUILD_NUMBER
+	DEFAULT_ENV=$CI_BRANCH
 fi
 
 # If there is a PR number provided, though, then we will use it instead.
